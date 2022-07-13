@@ -10,13 +10,13 @@ It uses ncurses for drawing TUI.
 
 <!-- TODOS -->
 
-*TODO (3):*
+**TODO (3):**
 
 - [ ] Learn F# and C#
 - [ ] Learn OpenGL in Rust
 - [ ] Learn WebGL
 
-*DONE (5):*
+**DONE (5):**
 
 - [x] Style this TUI up
 - [x] Eat breakfast

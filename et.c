@@ -100,7 +100,7 @@ void fprint_todo(FILE* fd, Todo* todo) {
         fprintf(fd, "- [%c] %s\n", (todo->flags & F_DONE) ? 'x' : ' ',
                 todo->content);
     } else {
-        fprintf(fd, "\n*%s (%d):*\n\n", todo->content, count_todos(todo->next));
+        fprintf(fd, "\n**%s (%d):**\n\n", todo->content, count_todos(todo->next));
     }
 }
 
@@ -194,7 +194,7 @@ void parse_line(char* line) {
         case '*': {  // header
             char buff[16] = {};
             int ignore;
-            sscanf(line, "*%s (%d):*", buff, &ignore);
+            sscanf(line, "**%s (%d):**", buff, &ignore);
             Todo* head = new_header(buff);
             if (strcmp(buff, "TODO") == 0) {
                 todo_head = head;
