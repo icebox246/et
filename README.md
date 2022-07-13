@@ -25,6 +25,10 @@ It uses ncurses for drawing TUI.
 - [x] Feed the dog
 <!-- ENDTODOS -->
 
+How it looks in the app:
+
+![screenshot](./screenshot.png)
+
 ## Get started
 
 Install ncurses and gcc.
