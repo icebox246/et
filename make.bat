@@ -1,0 +1,1 @@
+gcc -o et.exe -Ipdcurses\include et.c .\pdcurses\lib\pdcurses.a
