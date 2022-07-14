@@ -39,3 +39,23 @@ Install ncurses and gcc.
 ./et README.md
 
 ```
+
+## Usage
+
+```console
+et <filename>
+```
+
+filename - path to your markdown file e.g. README.md
+
+#### Keybindings
+
+- `j`, `DOWN_ARROW` - go down a row
+- `k`, `UP_ARROW` - go up a row
+- `SPACE`, `ENTER` - toggle done/todo
+- `i` - new todo
+- `X` - remove item
+- `c` - edit item
+- `J` - move item down
+- `K` - move item up
+- `q` - quit et
