@@ -33,11 +33,16 @@ How it looks in the app:
 
 ## Get started
 
-Install ncurses and gcc.
+Install ncurses (linux) and gcc.
 
 ```console
 
-./make.sh
+#on linux
+./make.sh       
+
+#on windows
+./make.bat       
+
 ./et README.md
 
 ```
