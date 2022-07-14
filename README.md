@@ -16,8 +16,9 @@ It uses ncurses for drawing TUI.
 - [ ] Learn OpenGL in Rust
 - [ ] Learn WebGL
 
-**DONE (6):**
+**DONE (7):**
 
+- [x] Fix readline on windows
 - [x] Port ET to windows
 - [x] Style this TUI up
 - [x] Eat breakfast

@@ -273,6 +273,7 @@ void readline(char* b) {
     int c = getch();
     while (c != '\n' && c != 10) {
         switch (c) {
+            case 8:
             case KEY_BACKSPACE: {
                 if (!cur) break;
                 for (int i = cur - 1; i < len; i++) {
