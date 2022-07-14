@@ -1,9 +1,13 @@
 #include <errno.h>
-#include <ncurses.h>
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#if _WIN32
+#   include <curses.h>
+#else
+#   include <ncurses.h>
+#endif
 
 typedef struct Todo {
     char* content;
@@ -179,6 +183,7 @@ void save_changes(char* path) {
         printw("```\n\n%s...\n%s\n```\n", begin_todo_sect, end_todo_sect);
     }
 
+    remove(path);
     rename("et.tmp", path);
 }
 
@@ -266,7 +271,7 @@ void readline(char* b) {
     move(starty, startx + cur);
 
     int c = getch();
-    while (c != '\n') {
+    while (c != '\n' && c != 10) {
         switch (c) {
             case KEY_BACKSPACE: {
                 if (!cur) break;
@@ -317,8 +322,6 @@ int main(int argc, char** argv) {
 
     initscr();  // init ncurses
     noecho();
-    raw();
-    cbreak();
     keypad(stdscr, 1);
 
     use_default_colors();
